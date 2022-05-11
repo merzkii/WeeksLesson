@@ -93,10 +93,13 @@ namespace week5
         
         static void schedule2for(int x)           //ეს შემთხვევით გამივარდა 
         {
-            for (int i = 0; i <=20; i += 2)
+            for (int i = 0; i <=x; i++)
             {
+                if (i%2==0)
+                {
+                    Console.WriteLine(i * i);
+                }
                 
-                Console.WriteLine(i*i);
             }
         }
     }
