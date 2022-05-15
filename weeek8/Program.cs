@@ -8,9 +8,21 @@ namespace weeek8
     {
         static void Main(string[] args)
         {
+            //var count = CountFromArray(new[] { 'B', 'B', 'A', 'A', 'C' }, 'A');
             IdentifyPairs();
-            PowForN(49, 71, 2);
-            var letters = lastletters("motivation", "demotivation");
+            //PowForN(49, 71, 2);
+            //var letters = lastletters("motivation", "demotivation");
+        }
+
+        static int CountFromArray(char[] array, char value)
+        {
+            int counter = 0;
+            foreach (var item in array)
+            {
+                if (item == value)
+                    counter = counter + 1;  
+            }
+            return counter;
         }
 
 
@@ -23,13 +35,13 @@ namespace weeek8
 
             foreach (var item in distinctInputs)
             {
-                int count = input.Count(x => x == item);
+                int count = CountFromArray(input, item);
                 if (count > 1)
                 {
                     totalCount = totalCount + 1;
                 }
 
-                
+
             }
             Console.WriteLine(totalCount);
         }
